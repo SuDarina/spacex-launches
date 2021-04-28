@@ -1,23 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import LaunchData from './data/launches.json';
 import Timer from './Timer';
 import './App.css';
 
-class LaunchesList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            years : null,
-            months : null,
-            date: null,
-            hours: null,
-            minutes: null,
-            quarter: null,
-
-        }
-    }
-    render() {
-        return (
+function LaunchesList(){
+         return (
             <div className="App">
                 {LaunchData.map((launchDetail, index) => {
                     let className = 'launch-block mars';
@@ -40,7 +27,6 @@ class LaunchesList extends Component {
                 })}
             </div>
         );
-    }
 }
 
 export default LaunchesList;

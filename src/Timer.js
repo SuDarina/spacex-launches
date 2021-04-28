@@ -21,7 +21,7 @@ class Timer extends Component {
 
     getCountDownDate(){
         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        const monthName =  monthNames[this.props.months];
+        const monthName =  monthNames[this.props.months - 1];
         return new Date(monthName + ' ' + this.props.date + ' ' + this.props.years+ ' ' + this.props.hours + ':' + this.props.minutes + ':00')
     }
 
