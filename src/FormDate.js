@@ -3,6 +3,7 @@ import Timer from "./Timer";
 
 function FormDate (props){
     let r = true
+    let className = "white-font"
     function printDate() {
         let day = props.date
         if(String(day).length === 1) day = '0' + String(day)
@@ -16,8 +17,10 @@ function FormDate (props){
         let minute = props.minutes
         if(String(minute).length === 1) minute = '0' + String(minute)
 
-        if (day === null && month === null && year === null && hour === null && minute === null && quarter === null)
+        if (day === null || month === null || year === null || hour === null || minute === null || quarter === null) {
             r = false
+            className = "grey-font"
+        }
         if (day === null) day = '??'
         if (month === null) month = '??'
         if (year === null) year = '????'
@@ -26,21 +29,20 @@ function FormDate (props){
         if (quarter === null) quarter = '?'
 
 
-        return <h3>{day + '.' + month + '.' + year +' (' + quarter + ' quarter), ' + hour + ':' + minute}</h3>
+        return <h3 className={className}>{day + '.' + month + '.' + year +' (' + quarter + ' quarter), ' + hour + ':' + minute}</h3>
     }
     function timerRender(){
-        printDate()
-        if (r === true) {
+        if (r) {
             return (<Timer years={props.years} months={props.months} date={props.date} hours={props.hours}
                    minutes={props.minutes} quarter={props.quarter}/>)
         } else {
-            return ('Exact launch time unknown')
+            return "Exact launch time unknown"
         }
     }
 
     return(
         <div>
-            <h3>{printDate()}</h3>
+            {printDate()}
             {timerRender()}
         </div>);
 

@@ -6,15 +6,22 @@ body{
     margin: 0;
     background: black;
 }
+
 .launch-block {
     font-family: 'Lora', serif;
     text-align: center;
-    border: 1px white solid;
+    border: 1px #fff solid;
     background: black;
     margin: 20px;
-    color: white;
+    color: #fff;
     overflow: auto;
     padding: 5px;
+}
+.white-font{
+    color: #fff;
+}
+.grey-font{
+    color: #C1CFD3;
 }
 .mars {
     background: url("./images/mars.jpg");
