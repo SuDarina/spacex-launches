@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React, {Component} from "react";
 import "./App.css"
 
 class Timer extends Component {
@@ -42,43 +42,17 @@ class Timer extends Component {
 
     }
 
-    printDate() {
-        let day = this.props.date
-        if(String(day).length === 1) day = '0' + String(day)
-        let month = this.props.months
-        if(String(month).length === 1) month = '0' + String(month)
-        let year = this.props.years
-        let quarter = this.props.quarter
-
-        let hour = this.props.hours
-        if(String(hour).length === 1) hour = '0' + String(hour)
-        let minute = this.props.minutes
-        if(String(minute).length === 1) minute = '0' + String(minute)
-
-        if (day === null) day = '??'
-        if (month === null) month = '??'
-        if (year === null) year = '????'
-        if (hour === null) hour = '??'
-        if (minute === null) minute = '??'
-        if (quarter === null) quarter = '?'
-
-        return day + '.' + month + '.' + year +' (' + quarter + ' quarter), ' + hour + ':' + minute
-    }
-
     modifyOutput(){
         if (!isNaN(this.state.new_days) && !isNaN(this.state.new_hours) && !isNaN(this.state.new_minutes)){
             let prefix = this.state.flag === 1 ? "Left: " : "Passed: "
             return <section> {prefix} <div className="timer">{this.state.new_days} <small>days</small> {this.state.new_hours} <small>hours</small>  {this.state.new_minutes} <small>minutes</small></div></section>
 
-        } else {
-            return 'Exact launch time unknown'
         }
     }
 
     render() {
         return (
             <div>
-                <h3>{this.printDate()}</h3>
                 {this.modifyOutput()}
             </div>
         );

@@ -1,7 +1,7 @@
 import React from 'react';
 import LaunchData from './data/launches.json';
-import Timer from './Timer';
 import './App.css';
+import FormDate from "./FormDate";
 
 function LaunchesList(){
          return (
@@ -17,8 +17,8 @@ function LaunchesList(){
                     return (
                     <div className={className}>
                             <h1>{launchDetail.mission}</h1>
-                            <Timer years={launchDetail.launch.years} months={launchDetail.launch.months} date={launchDetail.launch.date} hours={launchDetail.launch.hours}
-                            minutes={launchDetail.launch.minutes} quarter={launchDetail.launch.quarter}/>
+                            <FormDate years={launchDetail.launch.years} months={launchDetail.launch.months} date={launchDetail.launch.date} hours={launchDetail.launch.hours}
+                                      minutes={launchDetail.launch.minutes} quarter={launchDetail.launch.quarter}/>
                             <h3>{launchDetail.vehicle}</h3>
                             <h3>{launchDetail.location}</h3>
                         </div>
