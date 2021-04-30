@@ -9,4 +9,9 @@
 ---
 
 ### Результат работы программы:
-![Результат](./public/result-2.jpg)
+
+Ссылка 🚀: [https://laughing-kare-58a032.netlify.app](https://laughing-kare-58a032.netlify.app)
+
+*Preview✨...*
+
+![Result](./public/result-2.jpg)
