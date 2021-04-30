@@ -17,12 +17,15 @@ body{
     overflow: auto;
     padding: 5px;
 }
+
 .white-font{
     color: #fff;
 }
+
 .grey-font{
-    color: #C1CFD3;
+    color: #C0CFD3;
 }
+
 .mars {
     background: url("./images/mars.jpg");
     background-size: 100%;
@@ -37,6 +40,7 @@ body{
     background: url("./images/earth.jpg");
     background-size: 100%;
 }
+
 .timer{
     border: 1px solid white;
     width: fit-content;
